@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1498182274 source:d:\c++\queue\main.cpp
+	<iostream>
+	<vector>
+	<deque>
+
+1498577526 source:d:\clase1\queue\main.cpp
+	<iostream>
+	<vector>
+	<deque>
+
