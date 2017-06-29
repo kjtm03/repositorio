@@ -43,7 +43,7 @@
 	<stdlib.h>
 	<vector>
 
-1498750664 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
+1498751567 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -51,7 +51,7 @@
 	<windows.h>
 	<conio.h>
 	"Nave.h"
-	"Asteroide.h"
+	"Kamikaze.h"
 	"Bala.h"
 
 1498344691 d:\ciencia-de-la-computacion-1\juegofinal\include\nave.h
@@ -86,4 +86,15 @@
 	<windows.h>
 	<conio.h>
 	"Nave.h"
+
+1498751567 d:\ciencia-de-la-computacion-1\juegofinal\include\kamikaze.h
+
+1498751567 source:d:\ciencia-de-la-computacion-1\juegofinal\src\kamikaze.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	<stdlib.h>
 

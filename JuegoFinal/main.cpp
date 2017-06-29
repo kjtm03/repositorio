@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <conio.h>
 #include "Nave.h"
-#include "Asteroide.h"
+#include "Kamikaze.h"
 #include "Bala.h"
 #define ESPACIO 32
 
@@ -51,11 +51,11 @@ int main()
 {
     Nave nave(35,30,3,3);
 
-    //Asteroide ast(10,4), ast2(4,8), ast3(10,15), ast4(4,15);
-    list<Asteroide *> asteroides;
-    list<Asteroide *>::iterator it;
+    //Kamikaze ast(10,4), ast2(4,8), ast3(10,15), ast4(4,15);
+    list<Kamikaze *> Kamikazes;
+    list<Kamikaze *>::iterator it;
     for(int i = 0; i<4; i++){
-        asteroides.push_back(new Asteroide(rand()%75+3, rand()%5+4));
+        Kamikazes.push_back(new Kamikaze(rand()%75+3, rand()%5+4));
     }
 
     list <Bala *> balas;
@@ -86,23 +86,23 @@ int main()
             }*/
 
         }
-        for(it = asteroides.begin(); it != asteroides.end(); it++)
+        for(it = Kamikazes.begin(); it != Kamikazes.end(); it++)
         {
             (*it)->mover();
             (*it)->choque(nave);
         }
-        //COLISION BALAS/ASTEROIDES
-        for(it = asteroides.begin(); it != asteroides.end(); it++){
+        //COLISION BALAS/KamikazeS
+        for(it = Kamikazes.begin(); it != Kamikazes.end(); it++){
             for(i = balas.begin(); i != balas.end(); i++){
                 if((*it)->X() == (*it)->X() &&  ( (*it)->Y()+1 == (*it)->Y() || (*it)->Y() == (*it)->Y())){
                     coordenada((*i)->X(), (*i)->Y()); printf("     ");
                     delete (*i);
                     i = balas.erase(i);
 
-                    asteroides.push_back(new Asteroide(rand()%74+3, 4));
+                    Kamikazes.push_back(new Kamikaze(rand()%74+3, 4));
                     coordenada((*it)->X(), (*it)->Y()); printf("     ");
                     delete(*it);
-                    it = asteroides.erase(it);
+                    it = Kamikazes.erase(it);
                     puntos+=5;
 
                 }
