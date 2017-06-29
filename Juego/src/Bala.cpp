@@ -18,9 +18,9 @@ void Bala::mover()
 {
     coordenada3(m,n);
     printf(" ");
-    if(n>4){
+    if(n>10){
         n--;
     }
     coordenada3(m,n);
-    printf("!");
+    printf("*");
 }

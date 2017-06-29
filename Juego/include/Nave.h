@@ -18,6 +18,7 @@ class Nave
         void morir();
         int get_x(){return x;}
         int get_y(){return y;}
+        int get_vidas(){return vidas;}
         void danio(){vidas--;}
 };
 

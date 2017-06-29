@@ -13,8 +13,8 @@ using namespace std;
 
 int main()
 {
-    list <Bala *> balas;
-    list <Bala *>::iterator iterador;
+    //list <Bala *> balas;
+    //list <Bala *>::iterator iterador;
 
     Borde limite(0,0);
     limite.crearLimites();
@@ -24,25 +24,30 @@ int main()
     uno.borrarCursor();
     uno.numeroVidas();
     Kamikaze kamikaze(10,10),kamikaze1(10,10);
-
+    //bool game_over = true;
     bool game_over = false;
     while(!game_over){
 
-        if (kbhit())
+       /* if (kbhit())
         {
             char tecla = getch();
             if(tecla = ESPACIO)
-                balas.push_back(new Bala(uno.get_x()+2,uno.get_y()-1));
+                balas.push_back(new Bala(uno.get_x()+2,uno.get_y()));
         }
         for(iterador = balas.begin();iterador != balas.end();iterador++)
         {
             (*iterador)->mover();
         }
-
+*/
         kamikaze.mover(); kamikaze.colision(uno);
         //kamikaze1.mover(); kamikaze1.colision(uno);
         uno.morir();
         uno.mover();
-        Sleep(30);
+        if(uno.get_vidas()==-1) {
+                game_over = true;
+                printf("Game Over!");
+                //system("pause");
+        }
+        Sleep(35);
     }
 }

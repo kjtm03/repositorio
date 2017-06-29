@@ -85,8 +85,8 @@ void Nave::morir()
         Sleep(350);
 
         borrar();
-        vidas = 6;
-        numeroVidas();
-        caracter();
+        vidas = -1;
+        //numeroVidas();
+        //caracter();
     }
 }
